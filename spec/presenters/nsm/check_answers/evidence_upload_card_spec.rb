@@ -13,6 +13,10 @@ RSpec.describe Nsm::CheckAnswers::EvidenceUploadsCard do
     { file_name: 'Offences.pdf' }
   end
 
+  before do
+    allow(claim).to receive(:gdpr_documents_deleted?).and_return(false)
+  end
+
   describe '#title' do
     it 'shows correct title' do
       expect(subject.title).to eq('Upload supporting evidence')

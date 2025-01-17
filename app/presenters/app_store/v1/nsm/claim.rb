@@ -92,6 +92,7 @@ module AppStore
         attribute :last_updated_at, :datetime
         attribute :youth_court_fee_adjustment_comment
         attribute :resubmission_deadline, :datetime
+        attribute :gdpr_documents_deleted, :boolean
 
         alias state application_state
         alias app_store_updated_at last_updated_at
@@ -192,6 +193,10 @@ module AppStore
           # further_informations map polymortphically to claims, and that mechanism requires
           # a claim with the appropriate ID to exist in the local db.
           @local_record ||= ::Claim.find_or_create_by!(id:)
+        end
+
+        def gdpr_documents_deleted?
+          respond_to?(:gdpr_documents_deleted) && gdpr_documents_deleted
         end
 
         delegate :with_lock, :provider_updated!, to: :local_record

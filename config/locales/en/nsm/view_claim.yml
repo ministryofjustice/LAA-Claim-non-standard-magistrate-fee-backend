@@ -48,8 +48,8 @@ en:
           accessibility:
             item: Item
             work_items_caption: Claimed work items
-            work_summary_caption: 'Summary of work items'
-            net_cost: 'Sum of net cost claimed:'
+            work_summary_caption: "Summary of work items"
+            net_cost: "Sum of net cost claimed:"
         allowed_work_items:
           page_title: Claim details
           work_items: Adjusted work items
@@ -66,8 +66,8 @@ en:
           allowed_net_cost: Net cost allowed
           adjustment_comment: Reason for adjustment
           accessibility:
-            allowed_net_cost: 'Sum of net cost allowed:'
-            net_cost: 'Sum of net cost claimed:'
+            allowed_net_cost: "Sum of net cost allowed:"
+            net_cost: "Sum of net cost claimed:"
             work_items_caption: Adjusted work items
             work_summary_caption: Summary of adjusted work items
           vat: VAT on claimed
@@ -96,7 +96,7 @@ en:
           number: Number claimed
           uplift: Uplift claimed
           net_cost: Net cost claimed
-          net_cost_description: 'Sum of net cost claimed: '
+          net_cost_description: "Sum of net cost claimed: "
           allowed_number: Number allowed
           allowed_uplift: Uplift allowed
           allowed_net_cost: Net cost allowed
@@ -176,7 +176,8 @@ en:
           - Review the requests and resubmit your claim by %{deadline}
           - After this date your claim will be automatically closed
           - <h3 class="govuk-heading-s">Further information request</h3>
-
+        gdpr_uploaded_files_deleted:
+          message: Uploaded files deleted. Your uploads are deleted after 6 months to keep your data safe.
 
         # view pages
         work_item:

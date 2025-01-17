@@ -8,12 +8,17 @@ module Nsm
       def initialize(claim)
         @group = 'supporting_evidence'
         @section = 'supporting_evidence'
+        @has_card = claim.gdpr_documents_deleted?
         @claim = claim
         super()
       end
 
       def row_data
         postal_evidence_row + supporting_evidence_rows
+      end
+
+      def custom
+        claim.gdpr_documents_deleted? ? { partial: 'nsm/steps/view_claim/gdpr_uploaded_files_deleted' } : nil
       end
 
       private

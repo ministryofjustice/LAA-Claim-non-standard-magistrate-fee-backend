@@ -74,6 +74,10 @@ class Claim < ApplicationRecord
     defendants.where(main: false)
   end
 
+  def gdpr_documents_deleted?
+    false
+  end
+
   def dup
     super.tap do |new_record|
       new_record.defendants = defendants.map(&:dup)

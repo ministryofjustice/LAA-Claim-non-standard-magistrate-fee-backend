@@ -118,7 +118,7 @@ module Nsm
 
       def further_information_section
         claim.further_informations.order(requested_at: :desc).map do |further_information|
-          FurtherInformationCard.new(further_information)
+          FurtherInformationCard.new(further_information, claim)
         end
       end
 
